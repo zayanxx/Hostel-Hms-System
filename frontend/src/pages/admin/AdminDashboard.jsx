@@ -62,7 +62,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchAll = async () => {
       try {
-        const baseUrl = 'http://localhost:5003';
+        const baseUrl = 'https://hostelhms.onrender.com';
         const keys = Object.keys(ENDPOINTS);
         const urls = keys.map(k => axios.get(baseUrl + ENDPOINTS[k], { withCredentials: true }));
         const results = await Promise.all(urls);

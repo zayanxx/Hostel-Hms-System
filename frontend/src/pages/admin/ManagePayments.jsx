@@ -20,7 +20,7 @@ const ManagePayments = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const response = await axios.get('http://localhost:5003/api/payments', {
+        const response = await axios.get('https://hostelhms.onrender.com/api/payments', {
           withCredentials: true,
         });
         setPayments(response.data.data || []);

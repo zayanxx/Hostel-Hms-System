@@ -20,7 +20,7 @@ const ManageInvoices = () => {
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
-        const response = await axios.get('http://localhost:5003/api/invoices', { withCredentials: true });
+        const response = await axios.get('https://hostelhms.onrender.com/api/invoices', { withCredentials: true });
         setInvoices(response.data.data || []);
         setFilteredInvoices(response.data.data || []);
       } catch (err) {

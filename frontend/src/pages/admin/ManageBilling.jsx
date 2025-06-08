@@ -20,7 +20,7 @@ const ManageBilling = () => {
   useEffect(() => {
     const fetchBilling = async () => {
       try {
-        const response = await axios.get('http://localhost:5003/api/billing', {
+        const response = await axios.get('https://hostelhms.onrender.com/api/billing', {
           withCredentials: true,
         });
         setBillings(response.data.data || []);

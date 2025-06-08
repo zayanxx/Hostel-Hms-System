@@ -8,7 +8,7 @@ const ViewInvoices = () => {
   useEffect(() => {
     const fetchInvoices = async () => {
       try {
-        const res = await axios.get('http://localhost:5003//api/invoices/me'); // Adjust based on your base URL
+        const res = await axios.get('https://hostelhms.onrender.com/api/invoices/me'); // Adjust based on your base URL
         setInvoices(res.data.data);
       } catch (error) {
         console.error('Failed to fetch invoices:', error);

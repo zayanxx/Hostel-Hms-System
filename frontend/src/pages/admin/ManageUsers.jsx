@@ -20,7 +20,7 @@ const ManageUsers = () => {
   useEffect(() => {
     const fetchResidents = async () => {
       try {
-        const response = await axios.get('http://localhost:5003/api/residents', { withCredentials: true });
+        const response = await axios.get('https://hostelhms.onrender.com/api/residents', { withCredentials: true });
         setResidents(response.data.data);
         setFilteredResidents(response.data.data);
       } catch (err) {

@@ -9,7 +9,7 @@ const MyRoom = () => {
   useEffect(() => {
   const fetchMyRoom = async () => {
     try {
-      const res = await axios.get('http://localhost:5003/api/rooms/me');
+      const res = await axios.get('https://hostelhms.onrender.com/api/rooms/me');
       setRoom(res.data);
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to load room info');

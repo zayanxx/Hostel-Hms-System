@@ -24,7 +24,7 @@ const ManageMaintenance = () => {
   const fetchMaintenance = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:5003/api/maintenance`, {
+      const res = await axios.get(`https://hostelhms.onrender.com/api/maintenance`, {
         params: {
           page,
           limit,
@@ -49,7 +49,7 @@ const ManageMaintenance = () => {
   const handleComplete = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5003/api/maintenance/${id}`,
+        `https://hostelhms.onrender.com/api/maintenance/${id}`,
         { status: 'completed' },
         { withCredentials: true }
       );
@@ -63,7 +63,7 @@ const ManageMaintenance = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5003/api/maintenance/${id}`, {
+      await axios.delete(`https://hostelhms.onrender.com/api/maintenance/${id}`, {
         withCredentials: true,
       });
       toast.success('Record deleted successfully');

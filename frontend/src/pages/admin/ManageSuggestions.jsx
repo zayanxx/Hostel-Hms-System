@@ -23,7 +23,7 @@ const ManageSuggestions = () => {
   const fetchSuggestions = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5003/api/suggestions', {
+      const res = await axios.get('https://hostelhms.onrender.com/api/suggestions', {
         withCredentials: true,
       });
       setSuggestions(res.data.data);
@@ -37,7 +37,7 @@ const ManageSuggestions = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5003/api/suggestions/${id}`, {
+      await axios.delete(`https://hostelhms.onrender.com/api/suggestions/${id}`, {
         withCredentials: true,
       });
       setSuggestions((prev) => prev.filter((s) => s._id !== id));

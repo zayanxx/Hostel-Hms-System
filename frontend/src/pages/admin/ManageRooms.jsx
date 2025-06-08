@@ -24,8 +24,8 @@ const ManageRooms = () => {
     setLoading(true);
     try {
       const endpoint = showAvailableOnly
-        ? 'http://localhost:5003/api/rooms/available'
-        : 'http://localhost:5003/api/rooms';
+        ? 'https://hostelhms.onrender.com/api/rooms/available'
+        : 'https://hostelhms.onrender.com/api/rooms';
       const res = await axios.get(endpoint, { withCredentials: true });
       setRooms(res.data);
     } catch (err) {
