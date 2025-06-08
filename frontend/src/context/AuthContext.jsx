@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, { email, password });
+      const res = await axios.post(`https://hostelhms.onrender.com/api/auth/login`, { email, password });
       const { user: userData, token: tokenData } = res.data;
 
       if (!userData || !tokenData) throw new Error('Invalid server response');
@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, registrationData);
+      const res = await axios.post(`https://hostelhms.onrender.com/api/auth/register`, registrationData);
       const { user: userData, token: tokenData } = res.data;
 
       if (!userData || !tokenData) throw new Error('Invalid server response');
